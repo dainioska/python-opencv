@@ -2,8 +2,8 @@
 import cv2
 import numpy as np 
 
-img = cv2.imread('messi5.jpg')
-img2 = cv2.imread('opencv-logo.png')
+img = cv2.imread('samples/messi5.jpg')
+img2 = cv2.imread('samples/opencv-logo.png')
 
 print(img.shape) #returns tuple
 print(img.size) #returns pixels

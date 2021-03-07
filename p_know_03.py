@@ -2,7 +2,7 @@
 import cv2
 import numpy as np
 
-#img = cv2.imread('lena.jpg', 1)
+#img = cv2.imread('samples/lena.jpg', 1)
 img = np.zeros([512, 512, 3], np.uint8)
 
 img =cv2.line(img, (0,0), (255, 255), (255,0,0), 5)

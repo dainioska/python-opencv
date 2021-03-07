@@ -1,7 +1,7 @@
 #read and show from image
 import cv2
 
-img = cv2.imread('lena.jpg', -1)
+img = cv2.imread('samples/lena.jpg', -1)
 cv2.imshow('image', img)
 
 k = cv2.waitKey(0)
