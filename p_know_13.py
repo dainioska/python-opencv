@@ -1,10 +1,10 @@
-#picture colors HSV changes from trackbar
+#video colors HSV changes from trackbar
 import cv2
 import numpy as np
 
 def nothing(x):
     print(x)
-
+cap = cv2.VideoCapture(0)
 cv2.namedWindow("Tracking")
 cv2.createTrackbar("LH", "Tracking", 0, 255, nothing)
 cv2.createTrackbar("LS", "Tracking", 0, 255, nothing)
@@ -14,7 +14,9 @@ cv2.createTrackbar("US", "Tracking", 255, 255, nothing)
 cv2.createTrackbar("UV", "Tracking", 255, 255, nothing)
 
 while True:
-    frame = cv2.imread('samples/smarties.png')
+    #frame = cv2.imread('samples/smarties.png')
+    _, frame =cap.read()
+
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
     l_h = cv2.getTrackbarPos("LH", "Tracking")
@@ -39,4 +41,5 @@ while True:
     if key == 27:
         break
 
+cap.release()
 cv2.destroyAllWindows()
