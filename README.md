@@ -1,1 +1,1 @@
-# python-opencv
+# python-opencv examples from ProgrammingKnowlege
