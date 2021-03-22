@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np 
 import lanes
 
-video = cv.VideoCapture("road_01.mp4")
+video = cv.VideoCapture("samplesH/road_01.mp4")
 
 if not video.isOpened():
     print('error while opennig the video')
