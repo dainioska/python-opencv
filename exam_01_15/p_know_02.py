@@ -2,8 +2,8 @@
 import cv2
 
 cap = cv2.VideoCapture(0)   # usb port number
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('samples/output.avi', fourcc, 20.0, (640, 480))
+#fourcc = cv2.VideoWriter_fourcc(*'XVID')
+#out = cv2.VideoWriter('samples/output.avi', fourcc, 20.0, (640, 480))
 #cap = cv2.VideoCapture('output.avi')
 
 #print(cap.isOpened())
@@ -13,7 +13,7 @@ while(cap.isOpened()):
        print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
        print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
-       out.write(frame)
+       #out.write(frame)
 
        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
        cv2.imshow('frame', gray)
@@ -24,7 +24,7 @@ while(cap.isOpened()):
         break
 
 cap.realease()
-out.realease()
+#out.realease()
 cv2.destroyAllWindows()
 
 
